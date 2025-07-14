@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://c8u8t53cvbv8w"]
+
+[ext_resource type="Script" uid="uid://d4efnlsx0ayr7" path="res://main.gd" id="1_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://cwjf18ysuveg7" path="res://assets/images/bg.png" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://cgkmq5ywqgqhj" path="res://src/Tako.tscn" id="2_0xm2m"]
+[ext_resource type="FontFile" uid="uid://c3f50qhkygrmo" path="res://assets/fonts/Xolonium-Regular.ttf" id="3_h2yge"]
+
+[sub_resource type="Theme" id="Theme_1bvp3"]
+default_font = ExtResource("3_h2yge")
+default_font_size = 48
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_1bvp3")
+
+[node name="Bg" type="Sprite2D" parent="."]
+texture = ExtResource("1_ig7tw")
+centered = false
+
+[node name="Label" type="Label" parent="."]
+visible = false
+offset_top = 213.0
+offset_right = 799.0
+offset_bottom = 236.0
+theme = SubResource("Theme_1bvp3")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+text = "GAME CLEAR!"
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 162
+
+[node name="Score" type="Label" parent="."]
+offset_right = 76.0
+offset_bottom = 33.0
+
+[node name="Tako" parent="." instance=ExtResource("2_0xm2m")]
+position = Vector2(425, 209)
+
+[node name="LimitTime" type="Label" parent="."]
+offset_left = 602.0
+offset_right = 799.0
+offset_bottom = 23.0
+horizontal_alignment = 2
