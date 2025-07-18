@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://c8q8w8q6u6jve"]
+
+[ext_resource type="Script" uid="uid://bplfc4jmm5evh" path="res://src/tako2.gd" id="1_e4te2"]
+[ext_resource type="Texture2D" uid="uid://d10aoqt3wmfxa" path="res://assets/images/tako.png" id="2_dnf67"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dr8gy"]
+radius = 30.0832
+
+[node name="Tako" type="Area2D"]
+script = ExtResource("1_e4te2")
+
+[node name="Tako" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_dnf67")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 3)
+shape = SubResource("CircleShape2D_dr8gy")
+
+[node name="Marker" type="Node2D" parent="."]
+
+[node name="Line2D" type="Line2D" parent="Marker"]
+points = PackedVector2Array(0, -69, 0, -44)
+
+[node name="Cursor" type="Node2D" parent="."]
+
+[node name="Line2D" type="Line2D" parent="Cursor"]
+points = PackedVector2Array(0, -69, 0, -56)
+default_color = Color(1, 0, 0, 1)
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

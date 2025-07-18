@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://c8u8t53cvbv8w"]
+[gd_scene load_steps=5 format=3 uid="uid://c8u8t53cvbv8w"]
 
 [ext_resource type="Script" uid="uid://d4efnlsx0ayr7" path="res://main.gd" id="1_1bvp3"]
 [ext_resource type="Texture2D" uid="uid://cwjf18ysuveg7" path="res://assets/images/bg.png" id="1_ig7tw"]
-[ext_resource type="PackedScene" uid="uid://cgkmq5ywqgqhj" path="res://src/Tako.tscn" id="2_0xm2m"]
 [ext_resource type="FontFile" uid="uid://c3f50qhkygrmo" path="res://assets/fonts/Xolonium-Regular.ttf" id="3_h2yge"]
 
 [sub_resource type="Theme" id="Theme_1bvp3"]
@@ -32,9 +31,6 @@ justification_flags = 162
 [node name="Score" type="Label" parent="."]
 offset_right = 76.0
 offset_bottom = 33.0
-
-[node name="Tako" parent="." instance=ExtResource("2_0xm2m")]
-position = Vector2(425, 209)
 
 [node name="LimitTime" type="Label" parent="."]
 offset_left = 602.0

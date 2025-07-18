@@ -1,4 +1,5 @@
 extends Area2D
+class_name Tako
 
 const EXPLOSION_OBJ = preload("res://src/explosion.tscn")
 

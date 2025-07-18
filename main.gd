@@ -5,6 +5,8 @@ extends Node2D
 @onready var _limit_time = $LimitTime
 
 const TAKO_OBJ = preload("res://src/tako.tscn")
+const TAKO2_OBJ = preload("res://src/tako2.tscn")
+
 const WAIT_TIME = 0.5
 
 var _pasttime = 0.0
@@ -27,6 +29,9 @@ func _process(_delta: float) -> void:
 		_pasttime = 0.0
 		# タコを生成
 		var tako = TAKO_OBJ.instantiate()
+		if randi_range(0, 100) < 30:
+			tako = TAKO2_OBJ.instantiate()
+
 		tako.name = "Tako" + str(cnt)
 		tako.position = Vector2(randf_range(0, get_viewport_rect().size.x), randf_range(0, get_viewport_rect().size.y))
 		add_child(tako)
